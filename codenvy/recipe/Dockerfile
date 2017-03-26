@@ -4,7 +4,8 @@ FROM eclipse/php
 WORKDIR /drupal
 
 #Install dependencies
-ADD http://raw.githubusercontent.com/drupal/drupal/8.4.x/composer.lock /drupal/
+ADD http://raw.githubusercontent.com/drupal/drupal/8.4.x/composer.lock /
+RUN composer install
 
 #Ready for Che launch
 WORKDIR /projects
