@@ -2,6 +2,7 @@
   "type": "project",
   "minimum-stability": "dev",
   "require": {
+    "composer/installers": "~1.0",
     "drupal/drupal": "8.4.x-dev",
     "drupal/console": "dev-master",
     "drush/drush": "8.x-dev"
@@ -12,5 +13,10 @@
         "drush/*": "source",
         "*": "auto"
     }
-  }  
+  },
+  "extra": {
+    "installer-paths": {
+      "/{$name}": ["drupal/drupal"]
+    }
+  }
 }
