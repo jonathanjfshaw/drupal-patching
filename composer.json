@@ -2,11 +2,16 @@
   "type": "project",
   "minimum-stability": "dev",
   "require": {
-    "drupal-composer/drupal-project": "8.x-dev"
+    "drupal/drupal": "8.x-dev"
+    "drupal/console": "1.x-dev",
+    "drush/drush": "8.x-dev",
+    "webflo/drush-shim": "dev-master"
   },
   "config": {
     "preferred-install": {
+        "webflo/drush-shim": "source",
         "drupal/*": "source",
+        "drush/*": "source",
         "*": "auto"
     }
   }  
