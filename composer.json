@@ -9,4 +9,5 @@
         "drupal/*": "source",
         "*": "auto"
     }
+  }  
 }
