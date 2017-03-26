@@ -2,8 +2,8 @@
   "type": "project",
   "minimum-stability": "dev",
   "require": {
-    "drupal/drupal": "8.x-dev",
-    "drupal/console": "1.x-dev",
+    "drupal/drupal": "8.4.x-dev",
+    "drupal/console": "dev-master",
     "drush/drush": "8.x-dev"
   },
   "config": {
