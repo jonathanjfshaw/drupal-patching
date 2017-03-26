@@ -1,7 +1,7 @@
 FROM eclipse/php
 
 #Setup folder structure
-WORKDIR projects/drupal
+WORKDIR /projects/drupal
 
 #Install dependencies
 ADD http://raw.githubusercontent.com/drupal/drupal/8.4.x/composer.lock .
