@@ -1,0 +1,12 @@
+{
+  "type": "project",
+  "minimum-stability": "dev",
+  "require": {
+    "drupal-composer/drupal-project": "8.x-dev"
+  },
+  "config": {
+    "preferred-install": {
+        "drupal/*": "source",
+        "*": "auto"
+    }
+}
