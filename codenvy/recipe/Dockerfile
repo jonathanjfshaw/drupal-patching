@@ -12,8 +12,8 @@ RUN sudo composer global config minimum-stability dev
 ENV PATH=$PATH:~/.composer/vendor/bin
 RUN sudo echo -e $PATH
 RUN sudo -E echo -e $PATH
-RUN sudo "PATH=$PATH" composer global require consolidation/cgr
-#RUN sudo cgr drupal/console:dev-master --bin-dir $HOME/bin
+RUN sudo composer global require consolidation/cgr
+RUN sudo ~/.composer/vendor/bin/cgr drupal/console:dev-master
 #RUN sudo cgr drush/drush:dev-master
 
 RUN sudo service mysql start
