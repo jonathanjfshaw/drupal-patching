@@ -1,7 +1,5 @@
 FROM eclipse/php
 
-RUN useradd newuser
-
 #Setup folder structure
 #WORKDIR /drupal
 
