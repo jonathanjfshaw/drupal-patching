@@ -10,9 +10,9 @@ RUN useradd newuser
 #ADD http://raw.githubusercontent.com/drupal/drupal/8.4.x/composer.json /drupal
 #RUN sudo composer install --no-scripts --no-autoloader
 #COPY . ./
-RUN sudo -i composer global config minimum-stability dev
+RUN sudo composer global config minimum-stability dev
 ENV PATH=$PATH:~/.composer/vendor/bin
-RUN sudo -i composer global require consolidation/cgr
+RUN sudo -E composer global require consolidation/cgr
 #RUN sudo cgr drupal/console:dev-master --bin-dir $HOME/bin
 #RUN sudo cgr drush/drush:dev-master
 
