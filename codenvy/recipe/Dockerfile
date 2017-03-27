@@ -9,8 +9,9 @@ FROM eclipse/php
 #RUN sudo composer install --no-scripts --no-autoloader
 #COPY . ./
 RUN sudo composer global config minimum-stability dev
+ENV PATH=$PATH:~/.composer/vendor/bin
 RUN sudo composer global require consolidation/cgr
-RUN sudo cgr drupal/console:dev-master
+RUN sudo cgr drupal/console:dev-master --bin-dir $HOME/bin
 RUN sudo cgr drush/drush:dev-master
 
 RUN sudo service mysql start
