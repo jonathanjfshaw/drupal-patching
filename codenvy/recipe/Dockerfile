@@ -8,13 +8,11 @@ FROM eclipse/php
 #ADD http://raw.githubusercontent.com/drupal/drupal/8.4.x/composer.json /drupal
 #RUN sudo composer install --no-scripts --no-autoloader
 #COPY . ./
-RUN sudo composer global config minimum-stability dev
 ENV PATH=$PATH:~/.composer/vendor/bin
-RUN sudo echo -e $PATH
-RUN sudo -E echo -e $PATH
+RUN sudo composer global config minimum-stability dev
 RUN sudo composer global require consolidation/cgr
-RUN sudo ~/.composer/vendor/bin/cgr drupal/console:dev-master
-#RUN sudo cgr drush/drush:dev-master
+RUN sudo ~/.composer/vendor/bin/cgr drupal/console:dev-master --stability dev
+RUN sudo ~/.composer/vendor/bin/cgr drush/drush:dev-master --stability dev
 
 RUN sudo service mysql start
 RUN sudo service apache2 start
