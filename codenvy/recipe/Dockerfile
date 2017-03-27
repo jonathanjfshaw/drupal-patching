@@ -12,6 +12,9 @@ RUN sudo composer global config minimum-stability dev
 RUN sudo composer global require drupal/console:dev-master
 RUN sudo composer global require drush/drush:dev-master
 
+RUN sudo service mysql start
+RUN sudo service apache2 start
+
 #Ready for Che launch
 WORKDIR /projects
 #Must end in a non-terminating command
