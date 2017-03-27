@@ -12,7 +12,7 @@ RUN useradd newuser
 #COPY . ./
 RUN sudo composer global config minimum-stability dev
 ENV PATH=$PATH:~/.composer/vendor/bin
-RUN sudo -echo $PATH
+RUN sudo echo $PATH
 RUN sudo -E echo $PATH
 RUN sudo "PATH=$PATH" composer global require consolidation/cgr
 #RUN sudo cgr drupal/console:dev-master --bin-dir $HOME/bin
