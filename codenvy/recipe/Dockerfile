@@ -9,8 +9,6 @@ FROM eclipse/php
 #RUN sudo composer install --no-scripts --no-autoloader
 #COPY . ./
 RUN sudo composer global config minimum-stability dev
-RUN sudo composer global require drupal/console:dev-master
-RUN sudo composer global require drush/drush:dev-master
 
 #Ready for Che launch
 WORKDIR /projects
