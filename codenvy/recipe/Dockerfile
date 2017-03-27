@@ -10,6 +10,7 @@ FROM eclipse/php
 #COPY . ./
 ENV PATH=$PATH:~/.composer/vendor/bin
 RUN sudo composer global config minimum-stability dev
+RUN sudo composer global require "hirak/prestissimo:^0.3"
 RUN sudo composer global require consolidation/cgr
 RUN sudo ~/.composer/vendor/bin/cgr --stability dev drupal/console:dev-master
 RUN sudo ~/.composer/vendor/bin/cgr --stability dev drush/drush:dev-master
