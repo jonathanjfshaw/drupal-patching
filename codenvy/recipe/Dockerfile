@@ -11,8 +11,8 @@ FROM eclipse/php
 RUN sudo composer global config minimum-stability dev
 ENV PATH=$PATH:~/.composer/vendor/bin
 RUN sudo composer global require consolidation/cgr
-RUN sudo cgr drupal/console:dev-master --bin-dir $HOME/bin
-RUN sudo cgr drush/drush:dev-master
+#RUN sudo cgr drupal/console:dev-master --bin-dir $HOME/bin
+#RUN sudo cgr drush/drush:dev-master
 
 RUN sudo service mysql start
 RUN sudo service apache2 start
